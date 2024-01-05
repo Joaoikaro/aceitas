@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora comigo?</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <div style="position: absolute;color: white;margin-top: 50px;font-size: 40px"><p>Nem adianta negar...</p></div>
+        <div id="bglh">
+           <h2>A bela dama aceita ficar comigo???🥺</h2>
+           <div id="btn-contai" style="margin: auto;width: 700px;height: 400px;gap: 10px;">
+               <button style="position: fixed;display: block;margin-left: 0px;border-radius: 30px;" class="btn" onclick="sim()">SIM😉</button>
+               <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;border-radius: 30px;">NÃO😭</button>
+        </div>
+        </div>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background: url(background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        align-items: center;
+        justify-content: center;
+        font-size: x-large;
+    }
+
+    h2 {
+      color: rgb(255, 255, 255);
+      font-size: 45px;
+    }
+
+    .bglh {
+      position: relative;
+      width: 100%;
+
+      top: 45%;
+      backdrop-filter: blur(5px);
+      background-color: red;
+    }
+
+    .btn {
+        background: black;
+        color: white;
+        border: none;
+        font-size: 45px;
+        padding: 10px;
+        height: 100px;
+        width: 280px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Agora não tem mais voltakkkkk :)");
+        location.href = "https://youtu.be/Wsciy6xZdtM?si=a2lw6jyIZO3llWxr";
+    }
+
+    function desvia(btn) {
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
